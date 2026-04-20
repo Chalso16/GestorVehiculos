@@ -5,7 +5,7 @@
 #include "Vehiculo.h"
 
 //constructores
-Vehiculo::Vehiculo(): marca(""),modelo(""), nivelEnergia(0){
+Vehiculo::Vehiculo(): marca(""),modelo(""), nivelEnergia(0), eficiencia(1), matricula("0000BBB"){
 }
 
 Vehiculo::Vehiculo(const string& marca, const string& modelo, const double& nivelEnergia, const int& eficiencia, const string& matricula) {
@@ -20,6 +20,8 @@ Vehiculo::Vehiculo(const Vehiculo &vehiculo) {
     this->marca=vehiculo.marca;
     this->modelo=vehiculo.modelo;
     this->nivelEnergia=vehiculo.nivelEnergia;
+    this->eficiencia=vehiculo.eficiencia;
+    this->matricula=vehiculo.matricula;
 }
 
 Vehiculo::~Vehiculo() {
