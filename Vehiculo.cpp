@@ -8,10 +8,12 @@
 Vehiculo::Vehiculo(): marca(""),modelo(""), nivelEnergia(0){
 }
 
-Vehiculo::Vehiculo(const string& marca, const string& modelo, const double& nivelEnergia) {
+Vehiculo::Vehiculo(const string& marca, const string& modelo, const double& nivelEnergia, const int& eficiencia, const string& matricula) {
     setMarca(marca);
     setModelo(modelo);
     setNivelEnergia(nivelEnergia);
+    setEficiencia(eficiencia);
+    setMatricula(matricula);
 }
 
 Vehiculo::Vehiculo(const Vehiculo &vehiculo) {
@@ -36,6 +38,15 @@ double Vehiculo::getNivelEnergia() const {
     return nivelEnergia;
 }
 
+int Vehiculo::getEficiencia() const {
+    return eficiencia;
+}
+
+string Vehiculo::getMatricula() const {
+    return matricula;
+}
+
+
 //setters
 void Vehiculo::setMarca(const string &marca) {
     this->marca=marca;
@@ -51,3 +62,18 @@ void Vehiculo::setNivelEnergia(const double &nivelEnergia) {
     }
     this->nivelEnergia=nivelEnergia;
 }
+
+void Vehiculo::setEficiencia(const int &eficiencia) {
+    if (eficiencia<1 || eficiencia > 100) {
+        throw invalid_argument("Eficiencia fuera de rango (1-100)");
+    }
+    this->eficiencia=eficiencia;
+}
+
+void Vehiculo::setMatricula(const string &matricula) {
+    if (matricula.size()!=8) {
+        throw invalid_argument("Matricula con formato erroneo");
+    }
+    this->matricula=matricula;
+}
+

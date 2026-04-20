@@ -12,7 +12,7 @@ private:
 public:
     //constructor
     VehiculoFamiliar();
-    VehiculoFamiliar(const string& marca, const string& modelo, const double& nivelEnergia);
+    VehiculoFamiliar(const string& marca, const string& modelo, const double& nivelEnergia, const int& eficiencia, const string& matricula);
     VehiculoFamiliar(const VehiculoFamiliar& vehiculoFamiliar);
     double calcularAutonomia() const override;
 };
