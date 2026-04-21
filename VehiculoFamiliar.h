@@ -15,6 +15,7 @@ public:
     VehiculoFamiliar(const string& marca, const string& modelo, const double& nivelEnergia, const int& eficiencia, const string& matricula);
     VehiculoFamiliar(const VehiculoFamiliar& vehiculoFamiliar) = default;
     ~VehiculoFamiliar() override;
+    //metodos override
     double calcularAutonomia() const override;
 };
 

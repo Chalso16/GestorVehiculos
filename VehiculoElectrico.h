@@ -8,7 +8,13 @@
 
 
 class VehiculoElectrico : public Vehiculo{
-
+    //constructor
+    VehiculoElectrico();
+    VehiculoElectrico(const string& marca, const string& modelo, const double& nivelEnergia, const int& eficiencia, const string& matricula);
+    VehiculoElectrico(const VehiculoElectrico& vehiculoElectrico) = default;
+    ~VehiculoElectrico() override;
+    //metodos override
+    double calcularAutonomia() const override;
 };
 
 
