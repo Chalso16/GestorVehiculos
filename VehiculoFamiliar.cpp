@@ -4,7 +4,7 @@
 
 #include "VehiculoFamiliar.h"
 
-VehiculoFamiliar::VehiculoFamiliar(): Vehiculo("", "", 0, 1, "0000BBB") {
+VehiculoFamiliar::VehiculoFamiliar(): Vehiculo("Seat", "Ibiza", 50, 65, "0001BBB") {
 }
 
 VehiculoFamiliar::VehiculoFamiliar(const string& marca, const string& modelo, const double& nivelEnergia, const int& eficiencia, const string& matricula):Vehiculo(marca, modelo, nivelEnergia, eficiencia, matricula) {

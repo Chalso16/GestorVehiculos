@@ -6,32 +6,33 @@
 #define GESTORVEHICULOS_APARCAMIENTO_H
 #include <iostream>
 #include <array>
+#include <vector>
 #include <stdexcept>
 using namespace std;
 
 template <typename T>
 class Aparcamiento {
 private:
-    array<T, 10> parking;
+    vector<T> parking;
     int plazasVacias;
 public:
     //constructores
     Aparcamiento();
-    Aparcamiento(array<T, 10> parking): parking(parking), plazasVacias(10){}
+    Aparcamiento(vector<T> parking): parking(parking), plazasVacias(10){}
     Aparcamiento(const Aparcamiento& aparcamiento) {
         this->parking=aparcamiento.parking;
         this->plazasVacias=aparcamiento.plazasVacias;
     }
     ~Aparcamiento(){}
     //getters
-    array<T, 10> getParking() const {
+    vector<T> getParking() const {
         return parking;
     }
     int getPlazasVacias() const {
         return plazasVacias;
     }
     //seters
-    void setParking(const array<T, 10>& parking) {
+    void setParking(const vector<T>& parking) {
         this->parking=parking;
     }
     void setPlazasVacias(const int& plazasVacias) {
@@ -44,13 +45,14 @@ public:
         if (plazasVacias==0) {
             throw invalid_argument("Parking lleno");
         }
-        parking.at(--plazasVacias) = vehiculo;
+        parking.push_back(vehiculo);
+        plazasVacias--;
     }
     void removeVehiculo() {
         if (plazasVacias==10) {
             throw invalid_argument("Parking vacio");
         }
-        parking.at(plazasVacias++) = 0;
+        parking.at(plazasVacias++) = T{};
     }
 };
 

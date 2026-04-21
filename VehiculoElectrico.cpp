@@ -4,7 +4,7 @@
 
 #include "VehiculoElectrico.h"
 
-VehiculoElectrico::VehiculoElectrico(): Vehiculo("", "", 0, 1, "0000BBB") {
+VehiculoElectrico::VehiculoElectrico(): Vehiculo("Tesla", "Model S", 70, 90 ,"0002BBB") {
 }
 
 VehiculoElectrico::VehiculoElectrico(const string& marca, const string& modelo, const double& nivelEnergia, const int& eficiencia, const string& matricula):Vehiculo(marca, modelo, nivelEnergia, eficiencia, matricula) {
