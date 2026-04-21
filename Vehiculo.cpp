@@ -5,10 +5,10 @@
 #include "Vehiculo.h"
 
 //constructores
-Vehiculo::Vehiculo(): marca(""),modelo(""), nivelEnergia(0), eficiencia(1), matricula("0000BBB"){
+Vehiculo::Vehiculo(): marca("Seat"),modelo("Ibiza"), nivelEnergia(25), eficiencia(65), matricula("0001BBB"){
 }
 
-Vehiculo::Vehiculo(const string& marca, const string& modelo, const double& nivelEnergia, const int& eficiencia, const string& matricula) {
+Vehiculo::Vehiculo(const string& marca, const string& modelo, const double& nivelEnergia, const int& eficiencia, const string& matricula):nivelEnergia(0), eficiencia(1) {
     setMarca(marca);
     setModelo(modelo);
     setNivelEnergia(nivelEnergia);
@@ -22,9 +22,6 @@ Vehiculo::Vehiculo(const Vehiculo &vehiculo) {
     this->nivelEnergia=vehiculo.nivelEnergia;
     this->eficiencia=vehiculo.eficiencia;
     this->matricula=vehiculo.matricula;
-}
-
-Vehiculo::~Vehiculo() {
 }
 
 //getters

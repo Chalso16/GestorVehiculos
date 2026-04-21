@@ -10,11 +10,16 @@ VehiculoFamiliar::VehiculoFamiliar(): Vehiculo("", "", 0, 1, "0000BBB") {
 VehiculoFamiliar::VehiculoFamiliar(const string& marca, const string& modelo, const double& nivelEnergia, const int& eficiencia, const string& matricula):Vehiculo(marca, modelo, nivelEnergia, eficiencia, matricula) {
 }
 
-VehiculoFamiliar::~VehiculoFamiliar() {
-}
-
 
 //metodos override
 double VehiculoFamiliar::calcularAutonomia() const {
-    return getNivelEnergia()*getEficiencia()/10.0;
+    return getNivelEnergia()*(getEficiencia()/10.0);
+}
+//sobrecarga
+ostream& operator<<(ostream& os, const VehiculoFamiliar& vehiculoFamiliar) {
+    os << "->"<< vehiculoFamiliar.getMarca() << " - " << vehiculoFamiliar.getModelo()<< ":"<< endl;
+    os << "->Matricula: "<< vehiculoFamiliar.getMatricula() << endl;
+    os << "->Eficiencia: " << vehiculoFamiliar.getEficiencia()
+    << " ->Nivel_Energia: " << vehiculoFamiliar.getNivelEnergia()<<endl;
+    os << "->Autonomia: " << vehiculoFamiliar.calcularAutonomia() << " Km";
 }

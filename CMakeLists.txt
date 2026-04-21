@@ -9,4 +9,7 @@ add_executable(GestorVehiculos main.cpp
         VehiculoFamiliar.cpp
         VehiculoFamiliar.h
         VehiculoElectrico.cpp
-        VehiculoElectrico.h)
+        VehiculoElectrico.h
+        Aparcamiento.cpp
+        Aparcamiento.h
+)

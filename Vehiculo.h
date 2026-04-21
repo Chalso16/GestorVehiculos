@@ -19,9 +19,9 @@ private:
 public:
     //constructores
     Vehiculo();
-    Vehiculo(const string& marca, const string& modelo, const double& nivelEnergia, const int& eficiencia, const string& matricula);
+    Vehiculo(const string& marca, const string& modelo,  const double& nivelEnergia, const int& eficiencia, const string& matricula);
     Vehiculo(const Vehiculo& vehiculo);
-    virtual ~Vehiculo();
+    virtual ~Vehiculo() = default;
     //getters
     string getMarca() const;
     string getModelo() const;
@@ -36,7 +36,6 @@ public:
     void setMatricula(const string& matricula);
     //metodo virtual
     virtual double calcularAutonomia() const = 0;
-
 };
 
 

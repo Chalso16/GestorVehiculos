@@ -8,13 +8,17 @@
 
 
 class VehiculoElectrico : public Vehiculo{
+public:
     //constructor
     VehiculoElectrico();
     VehiculoElectrico(const string& marca, const string& modelo, const double& nivelEnergia, const int& eficiencia, const string& matricula);
     VehiculoElectrico(const VehiculoElectrico& vehiculoElectrico) = default;
-    ~VehiculoElectrico() override;
+    ~VehiculoElectrico() override = default;
     //metodos override
     double calcularAutonomia() const override;
+    //sobrecarga
+    VehiculoElectrico operator++ ();
+    friend ostream& operator<<(ostream& os, const VehiculoElectrico& vehiculoElectrico);
 };
 
 
