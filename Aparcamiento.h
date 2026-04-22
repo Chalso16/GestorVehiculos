@@ -39,6 +39,7 @@ public:
         if (plazasVacias<0 ||plazasVacias> 10) {
             throw invalid_argument("Plazas vacias superior a numero de plazas");
         }
+        this->plazasVacias = plazasVacias;
     }
     //metodos generales
     void addVehiculo(const T& vehiculo) {
@@ -52,7 +53,8 @@ public:
         if (plazasVacias==10) {
             throw invalid_argument("Parking vacio");
         }
-        parking.at(plazasVacias++) = T{};
+        parking.pop_back();
+        plazasVacias++;
     }
 };
 

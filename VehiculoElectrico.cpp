@@ -10,13 +10,17 @@ VehiculoElectrico::VehiculoElectrico(): Vehiculo("Tesla", "Model S", 70, 90 ,"00
 VehiculoElectrico::VehiculoElectrico(const string& marca, const string& modelo, const double& nivelEnergia, const int& eficiencia, const string& matricula):Vehiculo(marca, modelo, nivelEnergia, eficiencia, matricula) {
 }
 
-
-
-
 //metodos override
 double VehiculoElectrico::calcularAutonomia() const {
     return (1.3*getNivelEnergia())*getEficiencia()/10.0;
-} <<
+}
+
+void VehiculoElectrico::consumirEnergia(const int &cantidad) {
+    if (cantidad > getNivelEnergia()) {
+        throw invalid_argument("Nivel_Energia menor a cantidad a consumir");
+    }
+    setNivelEnergia(getNivelEnergia() - cantidad);
+}
 
 //sobrecarga
 //Sobrecargar el preIncremento para que recarge la bateria al 100%

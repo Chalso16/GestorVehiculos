@@ -17,6 +17,7 @@ public:
     ~VehiculoFamiliar() override = default;
     //metodos override
     double calcularAutonomia() const override;
+    void consumirEnergia(const int &cantidad) override;
     //sobrecarga
     friend ostream& operator<<(ostream& os, const VehiculoFamiliar& vehiculoFamiliar);
 

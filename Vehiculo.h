@@ -36,6 +36,7 @@ public:
     void setMatricula(const string& matricula);
     //metodo virtual
     virtual double calcularAutonomia() const = 0;
+    virtual void consumirEnergia(const int& cantidad) = 0;
 };
 
 
