@@ -34,4 +34,5 @@ ostream& operator<<(ostream& os, const VehiculoElectrico& vehiculoElectrico) {
     os << "->Eficiencia: " << vehiculoElectrico.getEficiencia()
     << " ->Nivel_Energia: " << vehiculoElectrico.getNivelEnergia()<<endl;
     os << "->Autonomia: " << vehiculoElectrico.calcularAutonomia();
+    return os;
 }

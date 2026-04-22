@@ -22,4 +22,5 @@ ostream& operator<<(ostream& os, const VehiculoFamiliar& vehiculoFamiliar) {
     os << "->Eficiencia: " << vehiculoFamiliar.getEficiencia()
     << " ->Nivel_Energia: " << vehiculoFamiliar.getNivelEnergia()<<endl;
     os << "->Autonomia: " << vehiculoFamiliar.calcularAutonomia() << " Km";
+    return os;
 }
