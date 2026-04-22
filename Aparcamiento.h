@@ -17,7 +17,7 @@ private:
     int plazasVacias;
 public:
     //constructores
-    Aparcamiento();
+    Aparcamiento():plazasVacias(10){}
     Aparcamiento(vector<T> parking): parking(parking), plazasVacias(10){}
     Aparcamiento(const Aparcamiento& aparcamiento) {
         this->parking=aparcamiento.parking;

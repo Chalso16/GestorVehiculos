@@ -15,6 +15,13 @@ VehiculoFamiliar::VehiculoFamiliar(const string& marca, const string& modelo, co
 double VehiculoFamiliar::calcularAutonomia() const {
     return getNivelEnergia()*(getEficiencia()/10.0);
 }
+
+void VehiculoFamiliar::consumirEnergia(const int &cantidad) {
+    if (cantidad > getNivelEnergia()) {
+        throw invalid_argument("Nivel_Energia menor a cantidad a consumir");
+    }
+    setNivelEnergia(getNivelEnergia() - cantidad);
+}
 //sobrecarga
 ostream& operator<<(ostream& os, const VehiculoFamiliar& vehiculoFamiliar) {
     os << "->"<< vehiculoFamiliar.getMarca() << " - " << vehiculoFamiliar.getModelo()<< ":"<< endl;

@@ -7,7 +7,7 @@
 #include <iostream>
 #include <stdexcept>
 using namespace std;
-
+#include <string>
 
 class Vehiculo {
 private:
