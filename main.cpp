@@ -20,6 +20,7 @@ int main() {
         cout << *electrico << endl << endl;
 
         // 3. Probar la sobrecarga del operador ++ (recarga al 100%) en el eléctrico
+        cout << "Autonomia anted de la recarga: " << electrico->calcularAutonomia() << " km" << endl;
         cout << "Recargando el vehiculo electrico..." << endl;
         ++(*electrico);
         cout << "Nueva autonomia tras recarga: " << electrico->calcularAutonomia() << " km" << endl;
