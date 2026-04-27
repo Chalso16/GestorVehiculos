@@ -13,7 +13,6 @@ int main() {
         // 1. Gestión dinámica mediante shared_ptr (exclusivamente)
         shared_ptr<VehiculoFamiliar> familiar = make_shared<VehiculoFamiliar>("Toyota", "Corolla", 45.0, 70, "1234-BBB");
         shared_ptr<VehiculoElectrico> electrico = make_shared<VehiculoElectrico>("Tesla", "Model 3", 60.0, 95, "5678-CCC");
-
         // 2. Uso de la sobrecarga del operador
         cout << "---- ESTADO INICIAL DE LA FLOTA ----" << endl;
         cout << *familiar << endl << endl;
