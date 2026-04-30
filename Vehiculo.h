@@ -10,7 +10,7 @@ using namespace std;
 #include <string>
 
 class Vehiculo {
-private:
+private: 
     string marca;
     string modelo;
     double nivelEnergia;
